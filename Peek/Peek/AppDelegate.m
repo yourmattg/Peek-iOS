@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"parse_keys"
+                                                     ofType:@""];
+    NSString* content = [NSString stringWithContentsOfFile:path
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+    NSArray* comps = [content componentsSeparatedByString:@"\n"];
+    [Parse setApplicationId:[comps objectAtIndex:0]
+                  clientKey:[comps objectAtIndex:1]];
     return YES;
 }
 							
