@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  ContactRequestCell.h
 //  Peek
 //
 //  Created by Matthew Graf on 11/12/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface ContactRequestCell : UITableViewCell
 
 @end

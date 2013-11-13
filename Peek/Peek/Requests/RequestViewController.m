@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  FirstViewController.m
 //  Peek
 //
 //  Created by Matthew Graf on 11/12/13.
 //  Copyright (c) 2013 mattgraf. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "RequestViewController.h"
 
-@interface SecondViewController ()
+@interface RequestViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation RequestViewController
 
 - (void)viewDidLoad
 {
