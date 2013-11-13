@@ -25,10 +25,41 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Requests" image="first" id="u1e-5L-l1D"/>
+                    <connections>
+                        <segue destination="cGz-eB-AGM" kind="modal" identifier="Login" modalTransitionStyle="crossDissolve" id="4Ec-Sy-7ge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="653" y="-174"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="taE-al-XIt">
+            <objects>
+                <viewController id="cGz-eB-AGM" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e6V-ah-vai"/>
+                        <viewControllerLayoutGuide type="bottom" id="i4X-Cd-iqs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uU2-dr-GpA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A8s-MC-Ldu" customClass="FBLoginView">
+                                <rect key="frame" x="20" y="356" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.2264199361" green="0.66794023719999995" blue="0.78986085770000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="fbLoginView" destination="A8s-MC-Ldu" id="xwj-4N-dBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vwn-Se-iE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="-174"/>
         </scene>
         <!--Feed View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface RequestViewController : UIViewController
+
+@property (nonatomic, strong) PFUser *user;
 
 @end

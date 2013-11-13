@@ -35,6 +35,7 @@
 		A3277D5318332E21003EAB06 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5218332E21003EAB06 /* MobileCoreServices.framework */; };
 		A3277D5518332E26003EAB06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5418332E26003EAB06 /* QuartzCore.framework */; };
 		A3277D5718332E2C003EAB06 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5618332E2C003EAB06 /* StoreKit.framework */; };
+		A3C62C2318340B0400F8A8F6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		A3277D5218332E21003EAB06 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A3277D5418332E26003EAB06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3277D5618332E2C003EAB06 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				A3277D0318331DA5003EAB06 /* UIKit.framework in Frameworks */,
 				A3277D4518332D4D003EAB06 /* Parse.framework in Frameworks */,
 				A3277CFF18331DA5003EAB06 /* Foundation.framework in Frameworks */,
+				A3C62C2318340B0400F8A8F6 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +145,7 @@
 		A3277CFD18331DA5003EAB06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */,
 				A3277D5618332E2C003EAB06 /* StoreKit.framework */,
 				A3277D5418332E26003EAB06 /* QuartzCore.framework */,
 				A3277D5218332E21003EAB06 /* MobileCoreServices.framework */,
@@ -451,6 +455,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mattgraf/sandbox/Peek-iOS/Peek",
+					/Users/mattgraf/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peek/Peek-Prefix.pch";
@@ -468,6 +473,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mattgraf/sandbox/Peek-iOS/Peek",
+					/Users/mattgraf/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peek/Peek-Prefix.pch";
@@ -538,6 +544,7 @@
 				A3277D3218331DA5003EAB06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3277D3318331DA5003EAB06 /* Build configuration list for PBXNativeTarget "PeekTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +553,7 @@
 				A3277D3518331DA5003EAB06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

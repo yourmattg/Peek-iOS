@@ -10,4 +10,6 @@
 
 @interface ContactRequestCell : UITableViewCell
 
+@property (nonatomic, strong) UIImageView *contactImageView;
+
 @end

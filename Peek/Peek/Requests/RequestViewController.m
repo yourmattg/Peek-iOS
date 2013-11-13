@@ -7,6 +7,7 @@
 //
 
 #import "RequestViewController.h"
+#import "LoginViewController.h"
 
 @interface RequestViewController ()
 
@@ -18,6 +19,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    if(self.user == nil){
+        [self performSegueWithIdentifier:@"Login" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
