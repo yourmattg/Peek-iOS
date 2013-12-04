@@ -22,6 +22,10 @@
     NSArray* comps = [content componentsSeparatedByString:@"\n"];
     [Parse setApplicationId:[comps objectAtIndex:0]
                   clientKey:[comps objectAtIndex:1]];
+    
+    // facebookutils
+    [PFFacebookUtils initializeFacebook];
+    
     return YES;
 }
 							

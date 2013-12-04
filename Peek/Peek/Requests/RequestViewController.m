@@ -22,9 +22,19 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
     if(self.user == nil){
-        [self performSegueWithIdentifier:@"Login" sender:self];
+        [self showLoginController];
     }
+    
+    
+}
+
+-(void)showLoginController{
+    LoginViewController *logInController = [[LoginViewController alloc] init];
+    
+    logInController.delegate = self;
+    [self presentViewController:logInController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

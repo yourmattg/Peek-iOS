@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  LoginViewController.h
 //  Peek
 //
 //  Created by Matthew Graf on 11/12/13.
@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface RequestViewController : UIViewController<PFLogInViewControllerDelegate>
+@interface LoginViewController : PFLogInViewController
 
-@property (nonatomic, strong) PFUser *user;
 
 @end

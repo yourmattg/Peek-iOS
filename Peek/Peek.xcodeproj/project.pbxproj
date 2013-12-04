@@ -35,6 +35,7 @@
 		A3277D5318332E21003EAB06 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5218332E21003EAB06 /* MobileCoreServices.framework */; };
 		A3277D5518332E26003EAB06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5418332E26003EAB06 /* QuartzCore.framework */; };
 		A3277D5718332E2C003EAB06 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5618332E2C003EAB06 /* StoreKit.framework */; };
+		A38F0600184EC90E0085EDC1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F05FF184EC90E0085EDC1 /* SignUpViewController.m */; };
 		A3C62C2318340B0400F8A8F6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +73,8 @@
 		A3277D38183321EA003EAB06 /* ContactRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactRequestCell.m; path = Requests/ContactRequestCell.m; sourceTree = "<group>"; };
 		A3277D3A1833222A003EAB06 /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestViewController.h; path = Requests/RequestViewController.h; sourceTree = "<group>"; };
 		A3277D3B1833222A003EAB06 /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestViewController.m; path = Requests/RequestViewController.m; sourceTree = "<group>"; };
-		A3277D3D183325C4003EAB06 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		A3277D3E183325C4003EAB06 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A3277D3D183325C4003EAB06 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Peek/Login/LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		A3277D3E183325C4003EAB06 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Peek/Login/LoginViewController.m; sourceTree = SOURCE_ROOT; };
 		A3277D4018332769003EAB06 /* parse_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parse_keys; sourceTree = "<group>"; };
 		A3277D4418332D4D003EAB06 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A3277D4618332DAE003EAB06 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -85,6 +86,8 @@
 		A3277D5218332E21003EAB06 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A3277D5418332E26003EAB06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3277D5618332E2C003EAB06 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A38F05FE184EC90E0085EDC1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		A38F05FF184EC90E0085EDC1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,8 +175,7 @@
 				A3277D1018331DA5003EAB06 /* Main.storyboard */,
 				A3277D1618331DA5003EAB06 /* FeedViewController.h */,
 				A3277D1718331DA5003EAB06 /* FeedViewController.m */,
-				A3277D3D183325C4003EAB06 /* LoginViewController.h */,
-				A3277D3E183325C4003EAB06 /* LoginViewController.m */,
+				A38F05F7184EC79C0085EDC1 /* Login */,
 				A3277D36183320AD003EAB06 /* Requests */,
 				A3277D1918331DA5003EAB06 /* Images.xcassets */,
 				A3277D0518331DA5003EAB06 /* Supporting Files */,
@@ -220,6 +222,17 @@
 				A3277D38183321EA003EAB06 /* ContactRequestCell.m */,
 			);
 			name = Requests;
+			sourceTree = "<group>";
+		};
+		A38F05F7184EC79C0085EDC1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A3277D3D183325C4003EAB06 /* LoginViewController.h */,
+				A3277D3E183325C4003EAB06 /* LoginViewController.m */,
+				A38F05FE184EC90E0085EDC1 /* SignUpViewController.h */,
+				A38F05FF184EC90E0085EDC1 /* SignUpViewController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +338,7 @@
 				A3277D3F183325C4003EAB06 /* LoginViewController.m in Sources */,
 				A3277D3C1833222A003EAB06 /* RequestViewController.m in Sources */,
 				A3277D0F18331DA5003EAB06 /* AppDelegate.m in Sources */,
+				A38F0600184EC90E0085EDC1 /* SignUpViewController.m in Sources */,
 				A3277D0B18331DA5003EAB06 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
