@@ -33,7 +33,7 @@
     [label setTextColor:[UIColor whiteColor]];
     [label setFont:[UIFont fontWithName:@"AppleSDGothicNeo-Thin" size:40]];
     [label sizeToFit];
-    self.logInView.logo = label;
+    self.signUpView.logo = label;
 }
 
 - (void)didReceiveMemoryWarning

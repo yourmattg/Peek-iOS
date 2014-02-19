@@ -8,8 +8,13 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "PKContact.h"
 
 @implementation AppDelegate
+
+-(void)registerParseSubclasses{
+    [PKContact registerSubclass];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -20,6 +25,8 @@
                                                   encoding:NSUTF8StringEncoding
                                                      error:NULL];
     NSArray* comps = [content componentsSeparatedByString:@"\n"];
+    
+    [self registerParseSubclasses];
     [Parse setApplicationId:[comps objectAtIndex:0]
                   clientKey:[comps objectAtIndex:1]];
     

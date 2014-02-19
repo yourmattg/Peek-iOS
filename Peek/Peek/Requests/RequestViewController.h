@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface RequestViewController : UIViewController<PFLogInViewControllerDelegate>
+@interface RequestViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @property (nonatomic, strong) PFUser *user;
+@property (nonatomic, strong) NSMutableArray *contacts;
 
 @end
