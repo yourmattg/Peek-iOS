@@ -33,6 +33,12 @@
     // facebookutils
     [PFFacebookUtils initializeFacebook];
     
+    // customize navigation bar font
+    UIColor *blackColor = [UIColor blackColor];
+    UIFont *font =[UIFont fontWithName:@"AppleSDGothicNeo-Thin" size:20.0];
+    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:blackColor, NSForegroundColorAttributeName, font, NSFontAttributeName, nil];
+    [[UINavigationBar appearance] setTitleTextAttributes: attrs];
+    
     return YES;
 }
 							

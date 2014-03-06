@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
 #import "PKContact.h"
+#import "AddContactViewController.h"
 
 @interface RequestViewController ()
 
@@ -22,7 +23,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self.navigationController.navigationBar setTranslucent:NO];
-
+    [self.navigationItem setTitle:@"Requests"];
+    
+    // add "add contacts" button
+    UIBarButtonItem *addContactButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContactClicked)];
+    [self.navigationItem setRightBarButtonItem:addContactButton];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -48,6 +53,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Adding contacts
+
+-(void)addContactClicked{
+    [self performSegueWithIdentifier:@"AddContact" sender:self];
 }
 
 #pragma mark - Pulling friends list

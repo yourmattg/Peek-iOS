@@ -39,6 +39,7 @@
 		A3A8B85A18AC4A740076B356 /* PKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8B85918AC4A740076B356 /* PKContact.m */; };
 		A3A8B85E18AC4B9E0076B356 /* PKClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8B85D18AC4B9E0076B356 /* PKClient.m */; };
 		A3C62C2318340B0400F8A8F6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */; };
+		A3FE49FB18B55B6B00794DCF /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE49FA18B55B6B00794DCF /* AddContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		A3A8B85C18AC4B9E0076B356 /* PKClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKClient.h; sourceTree = "<group>"; };
 		A3A8B85D18AC4B9E0076B356 /* PKClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKClient.m; sourceTree = "<group>"; };
 		A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		A3FE49F918B55B6B00794DCF /* AddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddContactViewController.h; path = Requests/AddContactViewController.h; sourceTree = "<group>"; };
+		A3FE49FA18B55B6B00794DCF /* AddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddContactViewController.m; path = Requests/AddContactViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,8 @@
 		A3277D36183320AD003EAB06 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				A3FE49F918B55B6B00794DCF /* AddContactViewController.h */,
+				A3FE49FA18B55B6B00794DCF /* AddContactViewController.m */,
 				A3277D3A1833222A003EAB06 /* RequestViewController.h */,
 				A3277D3B1833222A003EAB06 /* RequestViewController.m */,
 				A3277D37183321EA003EAB06 /* ContactRequestCell.h */,
@@ -362,6 +367,7 @@
 				A3277D1818331DA5003EAB06 /* FeedViewController.m in Sources */,
 				A3277D39183321EA003EAB06 /* ContactRequestCell.m in Sources */,
 				A3277D3F183325C4003EAB06 /* LoginViewController.m in Sources */,
+				A3FE49FB18B55B6B00794DCF /* AddContactViewController.m in Sources */,
 				A3277D3C1833222A003EAB06 /* RequestViewController.m in Sources */,
 				A3277D0F18331DA5003EAB06 /* AppDelegate.m in Sources */,
 				A3A8B85E18AC4B9E0076B356 /* PKClient.m in Sources */,
