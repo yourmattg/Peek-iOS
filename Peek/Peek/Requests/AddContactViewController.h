@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddContactViewController : UIViewController <UISearchBarDelegate>
+@interface AddContactViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, strong) NSArray *usersArray;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end

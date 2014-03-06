@@ -7,12 +7,15 @@
 //
 
 #import "AddContactViewController.h"
+#import <Parse/Parse.h>
 
 @interface AddContactViewController ()
 
 @end
 
 @implementation AddContactViewController
+
+@synthesize usersArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,7 +46,42 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     NSString *searchParam = [searchBar text];
-    
+    PFQuery *query = [PFUser query];
+    [query whereKey:@"username" containsString:searchParam];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        if(!error){
+            usersArray = objects;
+            [self.tableView reloadData];
+            NSLog(@"%d users found", [objects count]);
+        }
+        else{
+            NSLog(@"%@", [error userInfo]);
+        }
+    }];
 }
+
+#pragma mark - Table view data source
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [usersArray count];
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    PFUser *user = (PFUser*)[usersArray objectAtIndex:[indexPath row]];
+    [cell.textLabel setText:[user username]];
+    
+    return cell;
+}
+
 
 @end

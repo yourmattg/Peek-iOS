@@ -45,6 +45,10 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HAV-OL-4b5" id="5mN-4i-90E"/>
+                                    <outlet property="delegate" destination="HAV-OL-4b5" id="WI2-qU-tD2"/>
+                                </connections>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="search usernames" id="UxI-4p-xv0">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
@@ -74,6 +78,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="UxI-4p-xv0" id="MF9-RK-4AE"/>
+                        <outlet property="tableView" destination="Gss-dk-UEl" id="cb2-Sh-3bj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAo-q8-HEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
