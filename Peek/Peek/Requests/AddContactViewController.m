@@ -19,6 +19,7 @@ static const CGFloat ROW_HEIGHT = 50.0;
 @implementation AddContactViewController
 
 @synthesize usersArray;
+@synthesize userSearchBar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,6 +62,15 @@ static const CGFloat ROW_HEIGHT = 50.0;
             NSLog(@"%@", [error userInfo]);
         }
     }];
+}
+
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
 }
 
 #pragma mark - Table view data source

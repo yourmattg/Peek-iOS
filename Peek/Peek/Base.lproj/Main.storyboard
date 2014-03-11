@@ -112,8 +112,8 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="searchBar" destination="UxI-4p-xv0" id="MF9-RK-4AE"/>
                         <outlet property="tableView" destination="Gss-dk-UEl" id="cb2-Sh-3bj"/>
+                        <outlet property="userSearchBar" destination="UxI-4p-xv0" id="bHO-rF-Rw4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAo-q8-HEp" userLabel="First Responder" sceneMemberID="firstResponder"/>

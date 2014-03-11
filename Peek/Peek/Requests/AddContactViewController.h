@@ -10,7 +10,7 @@
 
 @interface AddContactViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, strong) IBOutlet UISearchBar *userSearchBar;
 @property (nonatomic, strong) NSArray *usersArray;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
