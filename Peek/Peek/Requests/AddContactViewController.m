@@ -8,6 +8,9 @@
 
 #import "AddContactViewController.h"
 #import <Parse/Parse.h>
+#import "ContactRequestCell.h"
+
+static const CGFloat ROW_HEIGHT = 50.0;
 
 @interface AddContactViewController ()
 
@@ -71,16 +74,22 @@
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"AddContactCell";
+    ContactRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(!cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[ContactRequestCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     PFUser *user = (PFUser*)[usersArray objectAtIndex:[indexPath row]];
-    [cell.textLabel setText:[user username]];
+    [cell.usernameLabel setText:[user username]];
     
     return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return ROW_HEIGHT;
 }
 
 
