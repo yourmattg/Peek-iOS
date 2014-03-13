@@ -7,9 +7,11 @@
 //
 
 #import "PKContact.h"
+#import <Parse/PFObject+Subclass.h>
 
 @implementation PKContact
 
+@dynamic userObjectId;
 @dynamic name;
 @dynamic phone;
 @dynamic photoURI;
@@ -17,5 +19,6 @@
 +(NSString*)parseClassName{
     return @"PKContact";
 }
+
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Parse/PFObject+Subclass.h>
+#import <Parse/Parse.h>
 
 @interface PKContact : PFObject<PFSubclassing>
 
+@property (nonatomic, strong) NSString *userObjectId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSString *photoURI;

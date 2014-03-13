@@ -87,7 +87,10 @@
 }
 
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user{
-    NSLog(@"Sign up success");
+    // Create a PKContact for this user
+    PKContact *contact = [PKContact object];
+    contact.userObjectId = user.objectId;
+    [contact saveInBackground];
 }
 
 @end

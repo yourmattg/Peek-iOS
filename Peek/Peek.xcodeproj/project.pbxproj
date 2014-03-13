@@ -25,7 +25,6 @@
 		A3277D3C1833222A003EAB06 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3277D3B1833222A003EAB06 /* RequestViewController.m */; };
 		A3277D3F183325C4003EAB06 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3277D3E183325C4003EAB06 /* LoginViewController.m */; };
 		A3277D4118332769003EAB06 /* parse_keys in Resources */ = {isa = PBXBuildFile; fileRef = A3277D4018332769003EAB06 /* parse_keys */; };
-		A3277D4518332D4D003EAB06 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D4418332D4D003EAB06 /* Parse.framework */; };
 		A3277D4718332DAE003EAB06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D4618332DAE003EAB06 /* Security.framework */; };
 		A3277D4918332DB6003EAB06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D4818332DB6003EAB06 /* SystemConfiguration.framework */; };
 		A3277D4B18332E05003EAB06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D4A18332E05003EAB06 /* AudioToolbox.framework */; };
@@ -35,6 +34,7 @@
 		A3277D5318332E21003EAB06 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5218332E21003EAB06 /* MobileCoreServices.framework */; };
 		A3277D5518332E26003EAB06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5418332E26003EAB06 /* QuartzCore.framework */; };
 		A3277D5718332E2C003EAB06 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5618332E2C003EAB06 /* StoreKit.framework */; };
+		A37AD77E18CFD84200A18672 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37AD77D18CFD84200A18672 /* Parse.framework */; };
 		A38F0600184EC90E0085EDC1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F05FF184EC90E0085EDC1 /* SignUpViewController.m */; };
 		A3A8B85A18AC4A740076B356 /* PKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8B85918AC4A740076B356 /* PKContact.m */; };
 		A3A8B85E18AC4B9E0076B356 /* PKClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8B85D18AC4B9E0076B356 /* PKClient.m */; };
@@ -79,7 +79,6 @@
 		A3277D3D183325C4003EAB06 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Peek/Login/LoginViewController.h; sourceTree = SOURCE_ROOT; };
 		A3277D3E183325C4003EAB06 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Peek/Login/LoginViewController.m; sourceTree = SOURCE_ROOT; };
 		A3277D4018332769003EAB06 /* parse_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parse_keys; sourceTree = "<group>"; };
-		A3277D4418332D4D003EAB06 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A3277D4618332DAE003EAB06 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A3277D4818332DB6003EAB06 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A3277D4A18332E05003EAB06 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -89,6 +88,7 @@
 		A3277D5218332E21003EAB06 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A3277D5418332E26003EAB06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3277D5618332E2C003EAB06 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A37AD77D18CFD84200A18672 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A38F05FE184EC90E0085EDC1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		A38F05FF184EC90E0085EDC1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		A3A8B85818AC4A740076B356 /* PKContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKContact.h; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 				A3277D4918332DB6003EAB06 /* SystemConfiguration.framework in Frameworks */,
 				A3277D4718332DAE003EAB06 /* Security.framework in Frameworks */,
 				A3277D0118331DA5003EAB06 /* CoreGraphics.framework in Frameworks */,
+				A37AD77E18CFD84200A18672 /* Parse.framework in Frameworks */,
 				A3277D0318331DA5003EAB06 /* UIKit.framework in Frameworks */,
-				A3277D4518332D4D003EAB06 /* Parse.framework in Frameworks */,
 				A3277CFF18331DA5003EAB06 /* Foundation.framework in Frameworks */,
 				A3C62C2318340B0400F8A8F6 /* FacebookSDK.framework in Frameworks */,
 			);
@@ -157,6 +157,7 @@
 		A3277CFD18331DA5003EAB06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A37AD77D18CFD84200A18672 /* Parse.framework */,
 				A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */,
 				A3277D5618332E2C003EAB06 /* StoreKit.framework */,
 				A3277D5418332E26003EAB06 /* QuartzCore.framework */,
@@ -167,7 +168,6 @@
 				A3277D4A18332E05003EAB06 /* AudioToolbox.framework */,
 				A3277D4818332DB6003EAB06 /* SystemConfiguration.framework */,
 				A3277D4618332DAE003EAB06 /* Security.framework */,
-				A3277D4418332D4D003EAB06 /* Parse.framework */,
 				A3277CFE18331DA5003EAB06 /* Foundation.framework */,
 				A3277D0018331DA5003EAB06 /* CoreGraphics.framework */,
 				A3277D0218331DA5003EAB06 /* UIKit.framework */,
