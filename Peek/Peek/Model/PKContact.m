@@ -12,12 +12,13 @@
 @implementation PKContact
 
 @dynamic userObjectId;
-@dynamic name;
+@dynamic firstName;
+@dynamic lastName;
 @dynamic phone;
 @dynamic photoURI;
 
 +(NSString*)parseClassName{
-    return @"PKContact";
+    return @"Contact";
 }
 
 

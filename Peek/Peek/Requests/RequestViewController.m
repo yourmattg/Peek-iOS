@@ -28,6 +28,10 @@
     // add "add contacts" button
     UIBarButtonItem *addContactButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContactClicked)];
     [self.navigationItem setRightBarButtonItem:addContactButton];
+    
+    // "me" button for setting user info (picture, name)
+    UIBarButtonItem *meButton = [[UIBarButtonItem alloc] initWithTitle:@"me" style:UIBarButtonItemStylePlain target:self action:@selector(meButtonClick)];
+    [self.navigationItem setLeftBarButtonItem:meButton];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -61,6 +65,10 @@
     [self performSegueWithIdentifier:@"AddContact" sender:self];
 }
 
+-(void)meButtonClicked{
+    [self performSegueWithIdentifier:@"Profile" sender:self];
+}
+
 #pragma mark - Pulling friends list
 
 -(void)fetchContacts{
@@ -90,7 +98,8 @@
     // Create a PKContact for this user
     PKContact *contact = [PKContact object];
     contact.userObjectId = user.objectId;
-    [contact saveInBackground];
+    // TODO: uncommment this
+    //[contact saveInBackground];
 }
 
 @end
