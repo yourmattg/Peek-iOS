@@ -7,11 +7,13 @@
 //
 
 #import <Parse/Parse.h>
+#import "PKContact.h"
 
 @interface PKFriendship : PFObject<PFSubclassing>
 
-@property (nonatomic, strong) NSString *firstUserObjectId;
-@property (nonatomic, strong) NSString *secondUserObjectId;
+@property (nonatomic, strong) PKContact *requestingContact;
+@property (nonatomic, strong) PKContact *requestedContact;
 @property BOOL accepted;
+@property (nonatomic, strong) NSDate *acceptDate;
 
 @end

@@ -34,6 +34,7 @@
 		A3277D5318332E21003EAB06 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5218332E21003EAB06 /* MobileCoreServices.framework */; };
 		A3277D5518332E26003EAB06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5418332E26003EAB06 /* QuartzCore.framework */; };
 		A3277D5718332E2C003EAB06 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3277D5618332E2C003EAB06 /* StoreKit.framework */; };
+		A34FD9AE18D3961F00563CB4 /* PeekRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A34FD9AD18D3961F00563CB4 /* PeekRequestCell.m */; };
 		A363655B18D248AF005E1C03 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A363655A18D248AF005E1C03 /* EditProfileViewController.m */; };
 		A3684D8918D23DCF00DF06CB /* PKFriendship.m in Sources */ = {isa = PBXBuildFile; fileRef = A3684D8818D23DCF00DF06CB /* PKFriendship.m */; };
 		A37AD77E18CFD84200A18672 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37AD77D18CFD84200A18672 /* Parse.framework */; };
@@ -90,6 +91,8 @@
 		A3277D5218332E21003EAB06 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A3277D5418332E26003EAB06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3277D5618332E2C003EAB06 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A34FD9AC18D3961F00563CB4 /* PeekRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeekRequestCell.h; path = Requests/PeekRequestCell.h; sourceTree = "<group>"; };
+		A34FD9AD18D3961F00563CB4 /* PeekRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeekRequestCell.m; path = Requests/PeekRequestCell.m; sourceTree = "<group>"; };
 		A363655918D248AF005E1C03 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileViewController.h; path = Requests/EditProfileViewController.h; sourceTree = "<group>"; };
 		A363655A18D248AF005E1C03 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileViewController.m; path = Requests/EditProfileViewController.m; sourceTree = "<group>"; };
 		A3684D8718D23DCF00DF06CB /* PKFriendship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKFriendship.h; sourceTree = "<group>"; };
@@ -235,10 +238,12 @@
 			children = (
 				A3FE49F918B55B6B00794DCF /* AddContactViewController.h */,
 				A3FE49FA18B55B6B00794DCF /* AddContactViewController.m */,
-				A3277D3A1833222A003EAB06 /* RequestViewController.h */,
-				A3277D3B1833222A003EAB06 /* RequestViewController.m */,
 				A3277D37183321EA003EAB06 /* ContactRequestCell.h */,
 				A3277D38183321EA003EAB06 /* ContactRequestCell.m */,
+				A3277D3A1833222A003EAB06 /* RequestViewController.h */,
+				A3277D3B1833222A003EAB06 /* RequestViewController.m */,
+				A34FD9AC18D3961F00563CB4 /* PeekRequestCell.h */,
+				A34FD9AD18D3961F00563CB4 /* PeekRequestCell.m */,
 				A363655918D248AF005E1C03 /* EditProfileViewController.h */,
 				A363655A18D248AF005E1C03 /* EditProfileViewController.m */,
 			);
@@ -376,6 +381,7 @@
 			files = (
 				A3277D1818331DA5003EAB06 /* FeedViewController.m in Sources */,
 				A3277D39183321EA003EAB06 /* ContactRequestCell.m in Sources */,
+				A34FD9AE18D3961F00563CB4 /* PeekRequestCell.m in Sources */,
 				A3277D3F183325C4003EAB06 /* LoginViewController.m in Sources */,
 				A3FE49FB18B55B6B00794DCF /* AddContactViewController.m in Sources */,
 				A3277D3C1833222A003EAB06 /* RequestViewController.m in Sources */,

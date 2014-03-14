@@ -12,11 +12,13 @@
 @interface PKContact : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSString *userObjectId;
-@property (nonatomic, strong) NSString *firstName;
-@property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) PFUser *user;
+@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSString *photoURI;
 
 +(NSString*)parseClassName;
++(PKContact*)currentContact;
++(void)setCurrentContact:(PKContact*)contact;
 
 @end

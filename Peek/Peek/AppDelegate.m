@@ -73,7 +73,8 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [FBAppCall handleOpenURL:url sourceApplication:application withSession:[PFFacebookUtils session]];
+    // TODO: I'm not actually sure if the soureapplication paramater is correct, or if we are even using FB login anymore 
+    return [FBAppCall handleOpenURL:url sourceApplication:[[NSBundle mainBundle] bundleIdentifier] withSession:[PFFacebookUtils session]];
 }
 
 @end

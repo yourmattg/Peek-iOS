@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PKContact.h"
 
 @interface ContactRequestCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UIImageView *contactImageView;
 @property (nonatomic, strong) IBOutlet UILabel *usernameLabel;
 @property (nonatomic, strong) IBOutlet UIButton *addButton;
+@property (nonatomic, strong) PKContact *contact;
 
 @end

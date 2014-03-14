@@ -11,9 +11,10 @@
 
 @implementation PKFriendship
 
-@dynamic firstUserObjectId;
-@dynamic secondUserObjectId;
+@dynamic requestingContact;
+@dynamic requestedContact;
 @dynamic accepted;
+@dynamic acceptDate;
 
 +(NSString*)parseClassName{
     return @"Friendship";

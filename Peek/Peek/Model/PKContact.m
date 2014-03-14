@@ -11,9 +11,11 @@
 
 @implementation PKContact
 
+static PKContact *currentContact;
+
 @dynamic userObjectId;
-@dynamic firstName;
-@dynamic lastName;
+@dynamic user;
+@dynamic name;
 @dynamic phone;
 @dynamic photoURI;
 
@@ -21,5 +23,12 @@
     return @"Contact";
 }
 
++(PKContact*)currentContact{
+    return currentContact;
+}
+
++(void)setCurrentContact:(PKContact *)contact{
+    currentContact = contact;
+}
 
 @end
