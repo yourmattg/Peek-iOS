@@ -51,7 +51,8 @@ static const CGFloat ROW_HEIGHT = 50.0;
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     NSString *searchParam = [searchBar text];
-    PFQuery *query = [PKContact query];
+    PFQuery *query = [PKUser query];
+    // TODO: this shit doesnt work. I probably should just subclass PFUser...
     [query whereKey:@"username" containsString:searchParam];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if(!error){
@@ -78,14 +79,14 @@ static const CGFloat ROW_HEIGHT = 50.0;
 -(void)addFriendClick:(id)sender{
     UIButton *button = (UIButton*) sender;
     NSInteger row = button.tag;
-    PKContact *contact = [contactsArray objectAtIndex:row];
+    PKUser *user = [contactsArray objectAtIndex:row];
     
     // TODO: check if friendship already exists
     
     PKFriendship *friendship = [PKFriendship object];
-    friendship.requestingContact = [PKContact currentContact];
-    friendship.requestedContact = contact;
-    friendship.accepted = NO;
+    friendship.requestingUser = [PKUser currentUser];
+    friendship.requestedUser = user;
+    friendship.accepted = [NSNumber numberWithBool:NO];
     [friendship saveInBackground];
 }
 
@@ -104,7 +105,7 @@ static const CGFloat ROW_HEIGHT = 50.0;
         cell = [[ContactRequestCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    PKContact *contact = (PKContact*)[contactsArray objectAtIndex:[indexPath row]];
+    PKUser *contact = (PKUser*)[contactsArray objectAtIndex:[indexPath row]];
     [cell setContact:contact];
     [cell.addButton addTarget:self action:@selector(addFriendClick:) forControlEvents:UIControlEventTouchUpInside];
     

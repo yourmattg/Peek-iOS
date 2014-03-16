@@ -11,8 +11,8 @@
 
 @implementation PKFriendship
 
-@dynamic requestingContact;
-@dynamic requestedContact;
+@dynamic requestingUser;
+@dynamic requestedUser;
 @dynamic accepted;
 @dynamic acceptDate;
 

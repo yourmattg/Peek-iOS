@@ -39,8 +39,7 @@
 		A3684D8918D23DCF00DF06CB /* PKFriendship.m in Sources */ = {isa = PBXBuildFile; fileRef = A3684D8818D23DCF00DF06CB /* PKFriendship.m */; };
 		A37AD77E18CFD84200A18672 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37AD77D18CFD84200A18672 /* Parse.framework */; };
 		A38F0600184EC90E0085EDC1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F05FF184EC90E0085EDC1 /* SignUpViewController.m */; };
-		A3A8B85A18AC4A740076B356 /* PKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8B85918AC4A740076B356 /* PKContact.m */; };
-		A3A8B85E18AC4B9E0076B356 /* PKClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8B85D18AC4B9E0076B356 /* PKClient.m */; };
+		A3A8B85A18AC4A740076B356 /* PKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8B85918AC4A740076B356 /* PKUser.m */; };
 		A3C62C2318340B0400F8A8F6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */; };
 		A3FE49FB18B55B6B00794DCF /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE49FA18B55B6B00794DCF /* AddContactViewController.m */; };
 /* End PBXBuildFile section */
@@ -100,10 +99,8 @@
 		A37AD77D18CFD84200A18672 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A38F05FE184EC90E0085EDC1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		A38F05FF184EC90E0085EDC1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		A3A8B85818AC4A740076B356 /* PKContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKContact.h; sourceTree = "<group>"; };
-		A3A8B85918AC4A740076B356 /* PKContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKContact.m; sourceTree = "<group>"; };
-		A3A8B85C18AC4B9E0076B356 /* PKClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKClient.h; sourceTree = "<group>"; };
-		A3A8B85D18AC4B9E0076B356 /* PKClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKClient.m; sourceTree = "<group>"; };
+		A3A8B85818AC4A740076B356 /* PKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKUser.h; sourceTree = "<group>"; };
+		A3A8B85918AC4A740076B356 /* PKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKUser.m; sourceTree = "<group>"; };
 		A3C62C2218340B0400F8A8F6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		A3FE49F918B55B6B00794DCF /* AddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddContactViewController.h; path = Requests/AddContactViewController.h; sourceTree = "<group>"; };
 		A3FE49FA18B55B6B00794DCF /* AddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddContactViewController.m; path = Requests/AddContactViewController.m; sourceTree = "<group>"; };
@@ -194,7 +191,6 @@
 				A3277D1618331DA5003EAB06 /* FeedViewController.h */,
 				A3277D1718331DA5003EAB06 /* FeedViewController.m */,
 				A3A8B85B18AC4A7E0076B356 /* Model */,
-				A3A8B86018AC4BB40076B356 /* Network */,
 				A38F05F7184EC79C0085EDC1 /* Login */,
 				A3277D36183320AD003EAB06 /* Requests */,
 				A3277D1918331DA5003EAB06 /* Images.xcassets */,
@@ -264,21 +260,12 @@
 		A3A8B85B18AC4A7E0076B356 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A3A8B85818AC4A740076B356 /* PKContact.h */,
-				A3A8B85918AC4A740076B356 /* PKContact.m */,
+				A3A8B85818AC4A740076B356 /* PKUser.h */,
+				A3A8B85918AC4A740076B356 /* PKUser.m */,
 				A3684D8718D23DCF00DF06CB /* PKFriendship.h */,
 				A3684D8818D23DCF00DF06CB /* PKFriendship.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		A3A8B86018AC4BB40076B356 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				A3A8B85C18AC4B9E0076B356 /* PKClient.h */,
-				A3A8B85D18AC4B9E0076B356 /* PKClient.m */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,8 +373,7 @@
 				A3FE49FB18B55B6B00794DCF /* AddContactViewController.m in Sources */,
 				A3277D3C1833222A003EAB06 /* RequestViewController.m in Sources */,
 				A3277D0F18331DA5003EAB06 /* AppDelegate.m in Sources */,
-				A3A8B85E18AC4B9E0076B356 /* PKClient.m in Sources */,
-				A3A8B85A18AC4A740076B356 /* PKContact.m in Sources */,
+				A3A8B85A18AC4A740076B356 /* PKUser.m in Sources */,
 				A363655B18D248AF005E1C03 /* EditProfileViewController.m in Sources */,
 				A38F0600184EC90E0085EDC1 /* SignUpViewController.m in Sources */,
 				A3684D8918D23DCF00DF06CB /* PKFriendship.m in Sources */,

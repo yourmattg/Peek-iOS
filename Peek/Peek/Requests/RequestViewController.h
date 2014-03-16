@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import "PKContact.h"
+#import "PKUser.h"
 
 @interface RequestViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) PFUser *currentUser;
-@property (nonatomic, strong) PKContact *currentContact;
+@property (nonatomic, strong) PKUser *currentContact;
 @property (nonatomic, strong) NSMutableArray *contactsArray;
 @property (nonatomic, strong) IBOutlet UITableView *requestTableView;
 

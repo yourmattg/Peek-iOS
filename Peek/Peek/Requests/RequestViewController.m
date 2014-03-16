@@ -39,6 +39,8 @@
     // "me" button for setting user info (picture, name)
     UIBarButtonItem *editProfileButton = [[UIBarButtonItem alloc] initWithTitle:@"me" style:UIBarButtonItemStylePlain target:self action:@selector(editProfileClicked)];
     [self.navigationItem setLeftBarButtonItem:editProfileButton];
+    
+    NSLog(@"%@", [PFUser parseClassName]);
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -80,8 +82,8 @@
     }
     
     NSInteger row = [indexPath row];
-    PKContact *contact = [contactsArray objectAtIndex:row];
-    [cell.usernameLabel setText:contact.user.username];
+    PKUser *user = [contactsArray objectAtIndex:row];
+    [cell.usernameLabel setText:user.username];
     
     return cell;
 }
@@ -101,12 +103,12 @@
 -(void)fillContacts:(NSArray*)friendships{
     [contactsArray removeAllObjects];
     for(PKFriendship *friendship in friendships){
-        PKContact *contactToDisplay;
-        if(![friendship.requestedContact.objectId isEqualToString:currentContact.objectId]){
-            contactToDisplay = friendship.requestedContact;
+        PKUser *contactToDisplay;
+        if(![friendship.requestedUser.objectId isEqualToString:currentContact.objectId]){
+            contactToDisplay = friendship.requestedUser;
         }
         else{
-            contactToDisplay = friendship.requestingContact;
+            contactToDisplay = friendship.requestingUser;
         }
         [self.contactsArray addObject:contactToDisplay];
     }
@@ -114,8 +116,9 @@
 
 -(void)fetchFriendships{
     PFQuery *query = [PKFriendship query];
-    [query includeKey:@"requestingContact"];
-    [query includeKey:@"requestedContact"];
+    [query includeKey:@"requestingUser"];
+    [query includeKey:@"requestedUser"];
+    // TODO: other query parameters (user object id)
     [query findObjectsInBackgroundWithBlock:^(NSArray *friendships, NSError *error) {
         if(!error){
             [self fillContacts:friendships];
@@ -129,37 +132,10 @@
 
 #pragma mark - Log in delegate
 
--(void)createContactForUser:(PFUser*)user{
-    PKContact *contact = [PKContact object];
-    [contact setUserObjectId:user.objectId];
-    [contact setUser:user];
-    [contact saveInBackground];
-    [PKContact setCurrentContact:contact];
-}
-
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user{
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    // make a PKContact for this user if there isn't one already
-    PFQuery *query = [PKContact query];
-    [query whereKey:@"userObjectId" equalTo:user.objectId];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        if(!error){
-            if([objects count] == 0){
-                [self createContactForUser:user];
-            }
-            else{
-                [PKContact setCurrentContact:[objects firstObject]];
-            }
-        }
-        else{
-            NSLog(@"%@", [error userInfo]);
-        }
-    }];
-    
-    // TODO: fetch friends list
     [self fetchFriendships];
-    
 }
 
 #pragma mark - Sign up delegate
@@ -168,8 +144,5 @@
     NSLog(@"Failed to sign up: %@", [error localizedDescription]);
 }
 
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user{
-    [self createContactForUser:user];
-}
 
 @end

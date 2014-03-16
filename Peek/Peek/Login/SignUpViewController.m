@@ -34,12 +34,18 @@
     [label setFont:[UIFont fontWithName:@"AppleSDGothicNeo-Thin" size:40]];
     [label sizeToFit];
     self.signUpView.logo = label;
+    
+    [self.signUpView.signUpButton addTarget:self action:@selector(signUpButtonClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)signUpButtonClick:(id)sender{
+    // TODO: manual sign up, create a PKUser, not PFUser
 }
 
 @end

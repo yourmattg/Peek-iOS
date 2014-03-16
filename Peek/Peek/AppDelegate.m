@@ -8,12 +8,12 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-#import "PKContact.h"
+#import "PKUser.h"
 
 @implementation AppDelegate
 
 -(void)registerParseSubclasses{
-    [PKContact registerSubclass];
+    [PKUser registerSubclass];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
